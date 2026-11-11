@@ -1,0 +1,40 @@
+{
+  "_readme": "Edit this file to update prices. Prices are ex-factory PKR. wht = withholding tax for a FILER (non-filers pay ~3x, the app handles that). deprPct = value lost per year. Fields marked estimate in 'note' are rough; verify before relying on them.",
+  "asOf": "2026-11-11",
+  "defaults": {
+    "petrol": 346,
+    "petrolAsOf": "2026-11-07",
+    "elecTariff": 60,
+    "kibor1y": 13.03,
+    "kiborAsOf": "2026-11-02"
+  },
+  "cars": [
+    { "id": "alto-vxr", "name": "Suzuki Alto VXR", "type": "petrol", "price": 2994861, "cc": 658, "kmpl": 18, "deprPct": 5, "maintenance": 40000, "tokenTax": 1500, "wht": 14974, "insurancePct": 2.5, "source": "bolnews.com (Jan 2026 price list)" },
+    { "id": "alto-vxl-ags", "name": "Suzuki Alto VXL-AGS", "type": "petrol", "price": 3326446, "cc": 658, "kmpl": 18, "deprPct": 5, "maintenance": 42000, "tokenTax": 1500, "wht": 16632, "insurancePct": 2.5, "source": "bolnews.com (Jan 2026 price list)" },
+    { "id": "cultus-vxl", "name": "Suzuki Cultus VXL", "type": "petrol", "price": 4359160, "cc": 998, "kmpl": 15, "deprPct": 5, "maintenance": 50000, "tokenTax": 2500, "wht": 43592, "insurancePct": 2.5, "source": "bolnews.com (Jan 2026 price list)" },
+    { "id": "swift-gl-cvt", "name": "Suzuki Swift GL CVT", "type": "petrol", "price": 4605600, "cc": 1197, "kmpl": 15, "deprPct": 6, "maintenance": 55000, "tokenTax": 4000, "wht": 69084, "insurancePct": 2.5, "source": "bolnews.com (Jan 2026 price list)" },
+    { "id": "city-12-cvt", "name": "Honda City 1.2 CVT", "type": "petrol", "price": 4737000, "cc": 1199, "kmpl": 14, "deprPct": 5, "maintenance": 60000, "tokenTax": 4000, "wht": 71055, "insurancePct": 2.5, "source": "Daily Pakistan, 13 Jul 2026", "note": "wht estimate" },
+    { "id": "city-15-aspire", "name": "Honda City 1.5 Aspire CVT", "type": "petrol", "price": 6069000, "cc": 1497, "kmpl": 13, "deprPct": 5, "maintenance": 65000, "tokenTax": 7000, "wht": 121380, "insurancePct": 2.5, "source": "Daily Pakistan, 13 Jul 2026", "note": "wht estimate" },
+    { "id": "yaris-ativ-x", "name": "Toyota Yaris 1.5 ATIV X", "type": "petrol", "price": 5999000, "cc": 1496, "kmpl": 13, "deprPct": 5, "maintenance": 65000, "tokenTax": 7000, "wht": 119980, "insurancePct": 2.5, "source": "Pakistan Observer, May 2026 (promo price)", "note": "wht estimate" },
+    { "id": "corolla-16-x-cvt", "name": "Toyota Corolla Altis 1.6 X CVT-i", "type": "petrol", "price": 6699000, "cc": 1598, "kmpl": 12, "deprPct": 4.5, "maintenance": 70000, "tokenTax": 7000, "wht": 133980, "insurancePct": 2.5, "source": "PakWheels, Nov 2026", "note": "wht estimate" },
+    { "id": "corolla-18-grande", "name": "Toyota Corolla Altis Grande 1.8", "type": "petrol", "price": 7709000, "cc": 1798, "kmpl": 11, "deprPct": 5, "maintenance": 75000, "tokenTax": 10000, "wht": 154180, "insurancePct": 2.5, "source": "PakWheels, Nov 2026", "note": "wht estimate" },
+    { "id": "civic-oriel", "name": "Honda Civic Oriel", "type": "petrol", "price": 8834000, "cc": 1498, "kmpl": 11, "deprPct": 6, "maintenance": 85000, "tokenTax": 7000, "wht": 176680, "insurancePct": 2.5, "source": "Daily Pakistan, 13 Jul 2026", "note": "wht estimate" },
+    { "id": "corolla-cross-18", "name": "Toyota Corolla Cross 1.8", "type": "petrol", "price": 7235000, "cc": 1798, "kmpl": 11, "deprPct": 5, "maintenance": 75000, "tokenTax": 10000, "wht": 144700, "insurancePct": 2.5, "source": "PakWheels, Nov 2026", "note": "wht estimate" },
+
+    { "id": "corolla-cross-hev", "name": "Toyota Corolla Cross 1.8 HEV", "type": "hybrid", "price": 9299000, "cc": 1798, "kmpl": 17, "deprPct": 6, "maintenance": 75000, "tokenTax": 10000, "wht": 185980, "insurancePct": 2.5, "batteryCost": 0, "batteryYear": 0, "source": "PakWheels, Nov 2026", "note": "wht estimate; real-world 15-19 km/l" },
+    { "id": "hrv-ehev", "name": "Honda HR-V e:HEV", "type": "hybrid", "price": 10369000, "cc": 1496, "kmpl": 17, "deprPct": 7, "maintenance": 85000, "tokenTax": 7000, "wht": 207380, "insurancePct": 2.5, "source": "Daily Pakistan, 13 Jul 2026", "note": "wht estimate" },
+    { "id": "jolion-hev", "name": "Haval Jolion HEV", "type": "hybrid", "price": 10500000, "cc": 1497, "kmpl": 18, "deprPct": 9, "maintenance": 90000, "tokenTax": 7000, "wht": 210000, "insurancePct": 2.5, "source": "spotmv.com (expected Rs 98 L - 1.15 Cr)", "note": "price is an estimate; verify with dealer" },
+
+    { "id": "shark6", "name": "BYD Shark 6 (PHEV pickup)", "type": "phev", "price": 19950000, "cc": 1498, "kmpl": 11, "kmPerKwh": 4.5, "evShare": 60, "deprPct": 11, "maintenance": 60000, "tokenTax": 10000, "wht": 0, "chargerCost": 250000, "insurancePct": 2.5, "source": "ProPakistani, 12 Jun 2026", "note": "wht/tax treatment for PHEV may differ; verify" },
+
+    { "id": "atto2", "name": "BYD Atto 2 Premium", "type": "ev", "price": 7290000, "kmPerKwh": 6.5, "deprPct": 11, "maintenance": 25000, "tokenTax": 0, "wht": 0, "chargerCost": 250000, "insurancePct": 2.5, "source": "ProPakistani, 12 Jun 2026", "note": "Karachi with AC: ~6-7 km/kWh real" },
+    { "id": "atto3", "name": "BYD Atto 3 Advance", "type": "ev", "price": 8990000, "kmPerKwh": 6, "deprPct": 11, "maintenance": 25000, "tokenTax": 0, "wht": 0, "chargerCost": 250000, "insurancePct": 2.5, "source": "ProPakistani, 12 Jun 2026" },
+    { "id": "seal-dynamic", "name": "BYD Seal Dynamic", "type": "ev", "price": 14790000, "kmPerKwh": 6, "deprPct": 12, "maintenance": 30000, "tokenTax": 0, "wht": 0, "chargerCost": 250000, "insurancePct": 2.5, "source": "ProPakistani, 12 Jun 2026" },
+    { "id": "sealion7", "name": "BYD Sealion 7 Advanced", "type": "ev", "price": 15490000, "kmPerKwh": 5.5, "deprPct": 12, "maintenance": 30000, "tokenTax": 0, "wht": 0, "chargerCost": 250000, "insurancePct": 2.5, "source": "ProPakistani, 12 Jun 2026" }
+  ],
+  "rides": [
+    { "id": "ride-car", "name": "Ride-hailing car (AC)", "type": "ride", "perKm": 65, "perTrip": 100, "tripsPerDay": 2, "surgePct": 15, "note": "Average Karachi fares, Nov 2026 estimate. Check your usual app." },
+    { "id": "ride-mini", "name": "Ride-hailing mini / economy", "type": "ride", "perKm": 50, "perTrip": 80, "tripsPerDay": 2, "surgePct": 15, "note": "estimate" },
+    { "id": "ride-bike", "name": "Bike ride-hailing", "type": "ride", "perKm": 25, "perTrip": 40, "tripsPerDay": 2, "surgePct": 10, "note": "estimate; no AC, solo rider" }
+  ]
+}

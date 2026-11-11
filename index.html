@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Which Car Should I Buy?</title>
+  <meta name="description" content="Petrol, hybrid, plug-in or electric, cash or EMI, or just ride-hailing: the real monthly cost of each option in Pakistan, with fuel, depreciation, taxes and what your money could have earned instead.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap">
+      <p class="eyebrow">Car decision calculator · Pakistan</p>
+      <h1>Which car should I buy, <em>or should I just book a ride?</em></h1>
+      <p class="lede">Not the sticker price. Not the EMI. Fuel or charging, depreciation, taxes, insurance, financing and what your money could have earned, rolled into one honest number a month.</p>
+      <div class="toolbar">
+        <button type="button" id="btn-share" class="btn">Copy share link</button>
+        <button type="button" id="btn-reset" class="btn btn-ghost">Reset</button>
+        <span id="toast" class="toast" role="status" aria-live="polite"></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="panel" aria-labelledby="h-situation">
+      <div class="panel-head">
+        <h2 id="h-situation"><span class="num">1</span> Your situation</h2>
+        <div class="seg" role="radiogroup" aria-label="Situation">
+          <button type="button" data-mode="replace" role="radio">I'm replacing a car</button>
+          <button type="button" data-mode="first" role="radio">This is my first car</button>
+        </div>
+      </div>
+      <div id="current-card" class="card current"></div>
+    </section>
+
+    <section class="panel" aria-labelledby="h-options">
+      <div class="panel-head">
+        <h2 id="h-options"><span class="num">2</span> What you're choosing between</h2>
+        <p class="sub">Pick a preset and change anything. Up to five options, including ride-hailing.</p>
+      </div>
+      <div id="options" class="options"></div>
+      <button type="button" id="btn-add" class="btn btn-add">+ Add an option</button>
+    </section>
+
+    <section class="panel" aria-labelledby="h-driving">
+      <div class="panel-head">
+        <h2 id="h-driving"><span class="num">3</span> Your driving and prices</h2>
+      </div>
+      <div id="globals" class="card globals"></div>
+    </section>
+
+    <section class="results" aria-labelledby="h-results">
+      <h2 id="h-results" class="results-title">What each option really costs you</h2>
+      <div id="verdict" class="verdict"></div>
+      <div id="kpis" class="kpis"></div>
+
+      <figure class="figure">
+        <figcaption><b>Where the money goes, per month</b><span>Equivalent monthly cost, split by cause. Hover a block for its value.</span></figcaption>
+        <div id="chart-breakdown" class="chart-box"></div>
+        <div id="legend-breakdown" class="legend"></div>
+      </figure>
+
+      <figure class="figure">
+        <figcaption><b>How far you drive changes the winner</b><span>True monthly cost at every daily distance. Where lines cross is the break-even point.</span></figcaption>
+        <div id="chart-km" class="chart-box"></div>
+        <div id="legend-km" class="legend"></div>
+      </figure>
+
+      <figure class="figure">
+        <figcaption><b>Money gone if you stopped here</b><span>Everything paid so far (grown at your investment return) minus what selling the car would bring after settling any loan.</span></figcaption>
+        <div id="chart-time" class="chart-box"></div>
+        <div id="legend-time" class="legend"></div>
+      </figure>
+
+      <div class="table-wrap">
+        <table id="table" class="table"></table>
+      </div>
+      <div id="warnings" class="warnings"></div>
+    </section>
+
+    <section class="panel method">
+      <details>
+        <summary>How the numbers are worked out</summary>
+        <ul>
+          <li><b>True monthly cost</b> is the fixed amount a month whose invested value at the end of the period equals the invested value of every rupee the option takes, minus what you get back when you sell. It already includes the opportunity cost of your money.</li>
+          <li><b>Depreciation</b> uses a constant yearly loss of value. Insurance is charged on the car's falling value.</li>
+          <li><b>EMI</b> uses a standard reducing-balance loan. A loan still running at the end is paid off from the sale. Warnings flag the SBP auto-finance rules (Rs 30 lakh cap per person, at most 70% financed, 3 years above 1000cc, 5 years up to 1000cc, local EVs up to 7) as reported in late 2026. Confirm with your bank.</li>
+          <li><b>Withholding tax</b> presets are for filers; non-filers pay about three times as much. Registration is a percentage of the price.</li>
+          <li><b>Long trips</b>: petrol, hybrid and plug-in cars drive them; EVs and ride-hailing rent a car for each trip.</li>
+          <li><b>Running costs</b> (fuel, power, fares, upkeep, driver) rise each year at your inflation rate. Amounts are in rupees as you'd pay them.</li>
+        </ul>
+        <p class="fine">For education only, not financial advice. Prices in the presets are from public listings dated in <code>data/presets.json</code>; dealers, taxes and fuel prices change often.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="foot wrap">
+    <p>Open source. Prices live in <code>data/presets.json</code>; edit and send a pull request to update them.</p>
+  </footer>
+
+  <script src="assets/calc.js"></script>
+  <script src="assets/charts.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
